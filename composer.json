@@ -1,0 +1,13 @@
+{
+    "name": "vagrant/php2",
+    "require": {
+        "filp/whoops": "^2.14",
+      "ext-pdo": "*",
+        "vlucas/phpdotenv": "^5.3"
+    },
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
