@@ -1,12 +1,14 @@
 <?php
 require_once("../../kernel.php");
 use App\Ofegat;
-session_start();
 
+session_start();
 if (!isset($_SESSION['user'])){
     header('location:/Ejercicio5-1/login.php');
     die();
 }
+
+$user = unserialize($_SESSION['user']);
 if (!isset($_SESSION['ofegat'])){
     $arrayPalabras = ['Nacho','Calamar',"Marihuana",'Crack','Lejia','Judio','conejo','Espanya'];
     $ofegat = new Ofegat($arrayPalabras[rand(0,7)]);
@@ -30,7 +32,7 @@ if (isPost() && cfsr()){
     }
 
     if (substr($_SESSION['ofegat']->render(),-1) == 1){
-        echo "<br>YOU WIN";
+        echo "<br>YOU WIN " . $user->name;
         session_destroy();
         die();
     }
