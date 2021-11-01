@@ -1,8 +1,7 @@
 <?php
-session_start();
 require_once("../../kernel.php");
 use App\Ofegat;
-
+session_start();
 
 if (!isset($_SESSION['user'])){
     header('location:/Ejercicio5-1/login.php');
@@ -13,8 +12,6 @@ if (!isset($_SESSION['ofegat'])){
     $ofegat = new Ofegat($arrayPalabras[rand(0,7)]);
     $_SESSION['ofegat'] = $ofegat;
     $_SESSION['intentos'] = 6;
-} else{
-    $ofegat = unserialize($_SESSION['ofegat']);
 }
 
 
@@ -25,7 +22,6 @@ if (isPost() && cfsr()){
         die();
     }
     $letter =  $_POST['respuesta'];
-    dd($ofegat);
     try {
         $acerto = $_SESSION['ofegat']->addLetter($letter);
     }catch (Exception $e){

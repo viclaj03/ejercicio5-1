@@ -2,8 +2,7 @@
 
 <html lang="es">
 <body>
-<h1>Juego del calamar</h1>
-<h3><?=8?></h3>
+<h1>juego del ahorcado </h1>
 <h1>Intentos <?=$_SESSION['intentos']?></h1>
 <p> <?= $_SESSION['ofegat']->render() ?></p>
 <form method="post" action="juego.php">
