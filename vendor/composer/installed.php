@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'cf82db1bf10d8d22dd0c6ede4d1f9590422e8ed1',
     'name' => 'vagrant/php2',
   ),
   'versions' => 
@@ -76,12 +76,12 @@
     ),
     'vagrant/php2' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'cf82db1bf10d8d22dd0c6ede4d1f9590422e8ed1',
     ),
     'vlucas/phpdotenv' => 
     array (
